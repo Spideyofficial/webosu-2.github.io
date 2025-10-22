@@ -31,6 +31,7 @@
   <script src="scripts/settings.js"></script>
   <script src="scripts/jsloader.js"></script>
   <script src="scripts/lib/localforage.min.js"></script>
+  <script src="scripts/playmap.js"></script>
 </head>
 
 <body>
@@ -69,6 +70,12 @@
       <div class="announcement">
         Announcement: This site is still under development. If you encounter
         any issues, read <a href="faq.html">the FAQ</a>. Now ad-free again!
+      </div>
+      <br />
+      <div class="play-button-container">
+        <button id="play-beatmap" class="big-play-button">
+          Play Beatmap
+        </button>
       </div>
       <br />
       <div class="index-area">
@@ -132,7 +139,14 @@
       </div>
     </div>
   </div>
-  
+  <div class="map-selector">
+    <div class="map-tabs">
+      <div class="tab active" data-tab="beatmaps">Beatmaps</div>
+    </div>
+    <div id="beatmap-container" class="beatmap-list">
+      <!-- Beatmaps will be loaded here dynamically -->
+    </div>
+  </div>
 
   <script>
     // recently played
